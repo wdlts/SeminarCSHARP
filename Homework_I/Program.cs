@@ -1,4 +1,6 @@
-﻿/* int a, b;
+﻿/*ЗАДАЧА 1
+
+int a, b;
 
 Console.Write("Input integer a: ");
 
@@ -10,7 +12,7 @@ b = Convert.ToInt32(Console.ReadLine());
 
 if (a == b)
 {
-    Console.WriteLine("No MAX, numbers are equal");
+    Console.WriteLine("No MAX or MIN, numbers are equal");
 }
 else if (a > b)
 {
@@ -22,9 +24,11 @@ else
     Console.WriteLine($"Max = {b}");
     Console.WriteLine($"Min = {a}");
 }
+*/
 
-*/ 
-/*int a, b, c, max;
+/*ЗАДАЧА 2
+
+int a, b, c, max;
 
 Console.Write("Input integer a: ");
 
@@ -50,9 +54,21 @@ if (c > max)
     max = c;
 }
 
-Console.WriteLine($"Max is {max}"); */
+if (max == a && max == b && max == c)
+{
+        Console.WriteLine("No MAX, numbers are equal");
+}
+else
+{
+    Console.WriteLine($"MAX is {max}");
+}
 
-/*int number;
+*/
+
+
+/*ЗАДАЧА 3
+
+int number;
 
 Console.Write("Input integer : ");
 number = Convert.ToInt32(Console.ReadLine());
@@ -66,21 +82,33 @@ else
 
 */
 
-/*int N;
+/*ЗАДАЧА 4
+
+int N;
 
 Console.Write("Input integer number: ");
 N = Convert.ToInt32(Console.ReadLine());
 
+
 int current = 2;
 
-if (N < current)
+while (N < current)
 {
-    Console.WriteLine($"{N} is too small");
+    Console.WriteLine($"{N} is too small, try again");
+    Console.Write("Input integer number: ");
+    N = Convert.ToInt32(Console.ReadLine());
 }
 
-
-while(current <= N)
+while(current < N-1)
 {
-    Console.Write(current + " ");
-    current = current + 2;
-}*/
+    Console.Write(current + ", ");
+    current +=2;
+}
+Console.Write(current);
+*/
+
+
+
+
+
+    
