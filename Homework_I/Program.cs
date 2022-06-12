@@ -107,8 +107,3 @@ while(current < N-1)
 Console.Write(current);
 */
 
-
-
-
-
-    
