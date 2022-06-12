@@ -1,20 +1,25 @@
-﻿/* ZADACHA 1
+﻿ //ZADACHA 1
+/*
+Console.Write("Input integer number: ");
+int numsecond = Convert.ToInt32(Console.ReadLine());
 
-int MiddleShow()
+if (numsecond > 999 || numsecond < 100 && numsecond >= 0 || numsecond < -999 || numsecond > -100 && numsecond <0)
 {
-    Console.Write("Input integer number: ");
-    int num = Convert.ToInt32(Console.ReadLine());
-    int numsecond = num % 100 / 10;
-    
-    if (num < 0)
-    {
-        numsecond = numsecond*(-1);
-    }
-    return numsecond;
+    Console.WriteLine("Number is not 3-digit");
 }
-
+else
+{
+int MiddleShow()
+    {
+        if (numsecond < 0)
+        {
+            numsecond = numsecond*(-1);
+        }
+        numsecond = numsecond % 100 / 10;
+        return numsecond;
+    }
 Console.WriteLine(MiddleShow());
-
+}
 */
 
 //ZADACHA 2
