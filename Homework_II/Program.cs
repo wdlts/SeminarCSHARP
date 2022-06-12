@@ -3,84 +3,82 @@
 Console.Write("Input integer number: ");
 int numsecond = Convert.ToInt32(Console.ReadLine());
 
-if (numsecond > 999 || numsecond < 100 && numsecond >= 0 || numsecond < -999 || numsecond > -100 && numsecond <0)
-{
-    Console.WriteLine("Number is not 3-digit");
-}
-else
-{
-int MiddleShow()
+
+string MiddleShow(int numsecond)
     {
+        if (numsecond > 999 || numsecond < 100 && numsecond >= 0 || numsecond < -999 || numsecond > -100 && numsecond <0)
+        {
+            return ("Number is not 3-digit");
+        }
         if (numsecond < 0)
         {
             numsecond = numsecond*(-1);
         }
+        
         numsecond = numsecond % 100 / 10;
-        return numsecond;
+        return ($"{numsecond}");
     }
-Console.WriteLine(MiddleShow());
-}
+Console.WriteLine(MiddleShow(numsecond));
+
 */
 
 //ZADACHA 2
 /*
 Console.Write("Input integer number: ");
 int num = Convert.ToInt32(Console.ReadLine());
-
-
-if (num <100 && num >-100)
-{
-    Console.Write("No third number.");
-}
-else
-{
-    int ThirdShow()
+    string ThirdShow(int num)
     {
-            if (num > 99)
-            {
-                num = int.Parse(Convert.ToString(num)[2].ToString());
-            }
-            if (num < -99)
-            {
-                num = num*(-1);
-                num = int.Parse(Convert.ToString(num)[2].ToString());
-            }
-            num = Convert.ToInt32(num);
-            return num;
+        if (num <100 && num >-100)
+        {
+            return ("No third number.");
+        }
+        if (num > 99)
+        {
+            num = int.Parse(Convert.ToString(num)[2].ToString());
+        }
+        if (num < -99)
+        {
+            num = num*(-1);
+            num = int.Parse(Convert.ToString(num)[2].ToString());
+        }
+        num = Convert.ToInt32(num);
+        return ($"{num}");
     }
-Console.WriteLine(ThirdShow());
-}
+Console.WriteLine(ThirdShow(num));
+
 */
 
 //ZADACHA 2 VARIANT 2
-
 /*
+
 Console.Write("Input integer number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-if (num <100 && num >-100)
-{
-    Console.Write("No third number.");
-}
 
-else
-{
-    int ThirdShow()
+
+
+string ThirdShow(int num)
     {
-            if (num <0)
+        if (num <100 && num >-100)
+        {
+            return ("No third number.");
+        }
+        if (num <0)
+        {
             num = num * (-1);
-            while (num > 999)
-            {
-                num = num / 10;
-            }
-            if (num > 99 && num <=999)
-            {
-                num = num % 10;
-            }
-        return num;
+        }
+        while (num > 999)
+        {
+            num = num / 10;
+        }
+        if (num > 99 && num <=999)
+        {
+            num = num % 10;
+        }
+        return ($"{num}");
     }
-Console.WriteLine(ThirdShow());
-}
+Console.WriteLine(ThirdShow(num));
+
 */
 
 
