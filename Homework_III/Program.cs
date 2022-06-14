@@ -4,8 +4,6 @@
 Console.WriteLine("Input 5-digit number: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
-
-
 void PalindromeFunc(int num)
 {
     if (num<0)
@@ -18,22 +16,28 @@ void PalindromeFunc(int num)
     }
     else
     {
-    int[] array = num.ToString().ToCharArray().Select(x => x - '0').ToArray();
-    int num1 = array[0];
-    int num2 = array[1];
-    int num4 = array[3];
-    int num5 = array[4];
-    if (num1 != num5 && num2 != num4)
-        Console.WriteLine("Given number is not a palindrome");
-    if (((num > 9999 && num < 100000) && (num1 == num5 && num2 == num4)))
-    {
-        Console.WriteLine("Given number is a palindrome");
-    }
+        int[] array = num.ToString().ToCharArray().Select(x => x - '0').ToArray();
+        int num1 = array[0];
+        int num2 = array[1];
+        int num4 = array[3];
+        int num5 = array[4];
+
+        if (num1 != num5 && num2 != num4)
+        {
+            Console.WriteLine("Given number is not a palindrome");
+        }
+            
+        if (((num > 9999 && num < 100000) && (num1 == num5 && num2 == num4)))
+        {
+            Console.WriteLine("Given number is a palindrome");
+        }
     }
 }
 
 PalindromeFunc(num);
 */
+
+
 //ZADACHA 1 VARIANT 2
 /*
 Console.WriteLine("Input 5-digit number: ");
@@ -56,6 +60,7 @@ void PalindromeFunc(int num)
         int num2 = (num % 10000)/1000;
         int num3 = (num / 10) % 10;
         int num4 = num % 10;
+
         if (num1 == num4 && num2 == num3)
         {
             Console.WriteLine("Given number is a palindrome");
@@ -108,13 +113,14 @@ void CubeTable(int num)
     {   
         if (num < 0)
         {
-        Console.Write("Number < 0, input positive number");    
+            Console.Write("Number < 0, input positive number");    
         }
         else
         {
             int current = 1;
             int cube = 1;
             Console.Write(current);
+
             while (current < num)
             {   
                 current = current+1;
