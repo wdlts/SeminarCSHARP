@@ -84,7 +84,7 @@ for (int i = 0; i < array2.Length; i++)
 
 
 //Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве.
-
+/*
 int[] CreateRandomArray(int size, int min, int max)
 {
     int[] newArray = new int[size];
@@ -98,6 +98,7 @@ int[] CreateRandomArray(int size, int min, int max)
 
     return newArray;
 }
+*/
 /*
 bool IfDigitExists(int[] array, int num)
 {
@@ -127,7 +128,7 @@ else
 */
 //Задайте одномерный массив из 12 случайных чисел. Найдите количество элементов массива, 
 //значения которых лежат в отрезке [10,99].
-
+/*
 int Quantity (int[] array)
 {
     int sum = 0;
@@ -141,7 +142,7 @@ int Quantity (int[] array)
 int[] array1 = CreateRandomArray(12, 10, 100);
 int result = Quantity(array1);
 Console.WriteLine(result);
-
+*/
 
 
 

@@ -11,9 +11,9 @@ void MethodRaising()
     Console.WriteLine(Math.Pow(num1, num2));
 }
 MethodRaising();
-
-//ZADACHA 1 VARIANT 2
 */
+//ZADACHA 1 VARIANT 2
+
 /*
 int MethodRaising()
 {
@@ -36,12 +36,12 @@ int MethodRaising()
         
 }
 Console.WriteLine(MethodRaising());
-*/
+
 
 //ZADACHA 2
 //Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 //1, 2, 5, 7, 19, 3, 44, 3 -> [1, 2, 5, 7, 19, 3, 44, 3]
-
+*/
 /*
 void MethodArrayEight()
 {
