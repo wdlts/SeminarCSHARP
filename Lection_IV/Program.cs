@@ -109,3 +109,24 @@ for (int i = 1; i < 100; i++)
     Console.WriteLine($"f({i}) = {Fib(i)}");
 }
 */
+
+
+
+int[] array(int size)
+{
+    
+    size = 10;
+    
+    int[] newarray = new int[size];
+    
+    for (int i = 0; i<size; i++)
+    {
+        
+        newarray[i] = new Random().Next(1, 10);
+        
+        Console.Write (newarray[i] + " ");
+    }
+    return newarray;
+}
+
+array(10);
