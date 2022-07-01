@@ -13,10 +13,7 @@ int n = Convert.ToInt32(Console.ReadLine());
 
 double[,] NewArrayRandomDouble(int m, int n)
 {
-
-
     double[,] array = new double[m,n]; 
-
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j<n; j++)
@@ -27,7 +24,6 @@ double[,] NewArrayRandomDouble(int m, int n)
         Console.WriteLine();     
     }
     return array;
-    
 }
 
 NewArrayRandomDouble(m, n);
@@ -75,7 +71,6 @@ void ArrayCheckPosition (int[,] newarray)
     {
         Console.WriteLine("Index should be greater than 0");
     }
-
     else
     {
         k--;
@@ -110,7 +105,6 @@ ArrayCheckPosition(NewArray(7,4));
 int[,] NewArray (int m, int n)
 {
     int[,] array = new int[m, n];
-
     for (int i = 0; i<m; i++)
     {
         for (int j = 0; j<n; j++)
@@ -135,17 +129,12 @@ void ArMean (int[,] newarray)
     {        
         for (int l = 0; l<newarray.GetLength(0); l++)
         {            
-            
             sum = sum+newarray[l, k];
             armean = Math.Round((sum / div), 1);
-            
         }
-        
         sum=0;
         Console.Write(armean + "  ");
-        
     }
-    
     Console.WriteLine(); 
 }
 
