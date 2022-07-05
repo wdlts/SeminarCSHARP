@@ -8,8 +8,8 @@
 2 3 5 9
 2 4 4 8
 */
-
 /*
+
 int[,] NewArray (int m, int n)
 {
     int[,] array = new int[m, n];
@@ -53,7 +53,13 @@ void ArraySort (int[,] array)
     Console.WriteLine();    
     }
 }
-ArraySort(NewArray(4,4));
+
+Console.WriteLine("Input rows number");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input columns number");
+int n = Convert.ToInt32(Console.ReadLine());
+
+ArraySort(NewArray(m,n));
 */
 
 
