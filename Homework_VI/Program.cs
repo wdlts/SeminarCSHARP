@@ -47,17 +47,36 @@ Console.WriteLine("Total numbers greater than zero " + GreaterZero(myArray));
 */
 
 /*
-int[] Array = new int[] {1, 27, 3, 7};
-
-int[] CopyArray(int[] Array)
+int[] NewRandomArray(int size)
 {
-    int[] newArray = Array;
     
-    for (int j = 0; j < newArray.Length; j++)
+    int[] newArray = new int[size];
+    for (int i = 0; i < size; i++)
     {
-        Console.Write(newArray[j]+ "copy");
+        newArray[i] = new Random().Next(-99, 100);
+        Console.Write(newArray[i] + " ");
     }
+    Console.WriteLine();
+
     return newArray;
 }
-CopyArray(Array);
+
+int[] newArr = NewRandomArray(7);
+
+
+int[] CopyArray(int[] array)
+{
+    array = newArr;
+
+    for (int i = 0; i<array.Length; i++)
+        {
+            Console.Write(array[i] + " ");
+        }
+        Console.WriteLine();
+    return array;
+    
+}
+
+CopyArray(newArr);
 */
+

@@ -6,17 +6,27 @@ m = 3, n = 4.
 8 7,8 -7,1 9
 */
 /*
+<<<<<<< HEAD
 Console.WriteLine("Input row number: ");
 int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Input column number: ");
+=======
+Console.WriteLine("Input row quantity: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input column quantity: ");
+>>>>>>> 8eda1c6a621b6ede7d40256a309a657562018c5f
 int n = Convert.ToInt32(Console.ReadLine());
 
 double[,] NewArrayRandomDouble(int m, int n)
 {
+<<<<<<< HEAD
 
 
     double[,] array = new double[m,n]; 
 
+=======
+    double[,] array = new double[m,n]; 
+>>>>>>> 8eda1c6a621b6ede7d40256a309a657562018c5f
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j<n; j++)
@@ -27,7 +37,10 @@ double[,] NewArrayRandomDouble(int m, int n)
         Console.WriteLine();     
     }
     return array;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 8eda1c6a621b6ede7d40256a309a657562018c5f
 }
 
 NewArrayRandomDouble(m, n);
@@ -46,6 +59,7 @@ NewArrayRandomDouble(m, n);
 1 7 -> такого числа в массиве нет
 */
 
+<<<<<<< HEAD
 
 /*Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 
@@ -58,6 +72,9 @@ NewArrayRandomDouble(m, n);
 
 
 
+=======
+/*
+>>>>>>> 8eda1c6a621b6ede7d40256a309a657562018c5f
 int[,] NewArray (int m, int n)
 {
     int[,] array = new int[m, n];
@@ -72,27 +89,91 @@ int[,] NewArray (int m, int n)
     Console.WriteLine();    
     }
     return array;
+} 
+
+
+void ArrayCheckPosition (int[,] newarray)
+{
+    Console.WriteLine("Input row index");
+    int k = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Input column index");
+    int l = Convert.ToInt32(Console.ReadLine());
+
+    if (k == 0 || l == 0)
+    {
+        Console.WriteLine("Index should be greater than 0");
+    }
+    else
+    {
+        k--;
+        l--;
+        if (k < newarray.GetLength(0) && l < newarray.GetLength(1))
+        {
+            Console.WriteLine ($"Number on this position is {newarray[k,l]}");
+        }
+    else
+        {   
+            k++;
+            l++;
+            Console.WriteLine($"{k} {l} No such position in array");
+        }
+    }
+}   
+
+ArrayCheckPosition(NewArray(7,4));
+*/
+
+/*Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+Например, задан массив:
+1 4 7 2
+5 9 2 3
+8 4 2 4
+Среднее арифметическое каждого столбца: 4,6; 5,6; 3,6; 3.
+*/
+
+
+/*
+int[,] NewArray (int m, int n)
+{
+    int[,] array = new int[m, n];
+    for (int i = 0; i<m; i++)
+    {
+        for (int j = 0; j<n; j++)
+        {
+            array[i, j] = new Random().Next(1, 10);
+            Console.Write(array[i, j] + "    ");
+        }
+    Console.WriteLine();    
+    }
+    Console.WriteLine(); 
+    return array;
 }   
 
 
-Console.WriteLine();    
-
 void ArMean (int[,] newarray)
 {
+    double armean = 0;
+    double sum = 0;
+    double div = newarray.GetLength(0);
     
-    int armean = 0;
-    int sum = 0;
-    for (int k = 0; k<newarray.GetLength(0); k++)
-    {
-        for (int l = 0; l<newarray.GetLength(1); l++)
-        {
-            sum = sum + newarray[k,l];            
+    for (int k = 0; k<newarray.GetLength(1); k++)
+    {        
+        for (int l = 0; l<newarray.GetLength(0); l++)
+        {            
+            sum = sum+newarray[l, k];
+            armean = Math.Round((sum / div), 1);
         }
-        armean = sum/newarray.GetLength(0);
-        Console.Write(armean + " ");    
+        sum=0;
+        Console.Write(armean + "  ");
     }
-    
-    
-    
+    Console.WriteLine(); 
 }
-ArMean(NewArray(2,2));
+
+Console.WriteLine("Input row quantity");
+int k = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Input column quantity");
+int l = Convert.ToInt32(Console.ReadLine());
+ArMean(NewArray(k,l));
+*/
+
