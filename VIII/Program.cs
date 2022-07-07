@@ -196,7 +196,7 @@ int[,] NewArray (int m, int n)
     }
     return array;
 } 
-/*
+
 int[,] MinRowSum (int[,] array)
 {   
     int sum=0;
@@ -216,56 +216,111 @@ int[,] MinRowSum (int[,] array)
     return array;
     
 }
-*/
 
 void ShowMinRow (int[,] array)
-{
-    int Sum = 0, Sum1 = 0, Sum2 = 0, Row = 0;
-    for(int i = 0; i < array.GetLength(0); i++) //Проходим по циклу строк
+
+{   
+    int liml =  array.GetLength(1); 
+    int limk =  array.GetLength(0);
+    int min=array[0,4];
+    int minrownr=0;
+    for (int k = 0; k<array.GetLength(0); k++)
+    {
+        for (int l = 4; l<array.GetLength(1); l++)
         {
-            Sum2 = 0;
-        for(int j = 0; j < array.GetLength(1); j++) //Проходим по циклу столбцов
-            {   Sum2 += array[i, j];} //Сумма всех членов 1ой строки.
-                if(Sum2 < Sum1)
-            {   Sum = Sum2; Row = i;}
-                Sum1 = Sum2;
+            if (min > array[k,l])
+            {
+                min = array[k,l];
+                minrownr = k;
+            }
         }
-        Console.WriteLine("Smallest sum = {0}", Sum);
-        Console.WriteLine("Row nr. = {0}", Row+1);
+    }
+    Console.WriteLine(min);
+    Console.WriteLine(minrownr);   
 }
 
+int[,] newArray = NewArray(5,5);
+
+ShowMinRow(MinRowSum(newArray));
 
 
 /*
-{   
-           
-    int liml =  array.GetLength(1); 
-    int limk =  array.GetLength(0);
-    int min=array[limk-1,liml-1];
-    int minrownr=0;
-    
-    for (int k = 0; k<array.GetLength(0); k++)
+void ShowArray(int[,] array)
+{
+    for(int i = 0; i < array.GetLength(0); i++)
     {
-        
-        for (int l = liml-1; l<array.GetLength(1); l++)
+        for(int j = 0; j < array.GetLength(1); j++)
         {
-            
-            if (min > array[k,l])
-            
-            {
-                Console.WriteLine(l);
-                min = array[k,l];
-                minrownr = l;
-                
-            }
-            
-            
+            Console.Write(array[i,j] + "  ");
+        }
+        Console.WriteLine();
+    }
+}
+
+
+
+int[,] SpiralFIll(int sideNum)
+{
+    sideNum = 5;
+    int[,] array = new int[sideNum, sideNum];
+    int fillNum = 0;
+    
+
+    for (int delta = 0; delta<sideNum-2; delta++)
+    {
+
+    
+    for (int i = 0+delta; i<sideNum-delta; i++)
+        {
+            array[0+delta, i] = fillNum;
+            fillNum++;
+        }
+        fillNum--;
+    for (int i = 0+delta; i<sideNum-delta; i++)
+        {
+            array[i, 4-delta] = fillNum;
+            fillNum++;
+        }
+        fillNum--;
+    for (int i = sideNum-1-delta; i>=0+delta; i--)
+        {
+           array[4-delta, i] = fillNum; 
+           fillNum++;
+        }
+        fillNum--;
+    for (int i = sideNum-1-delta; i>=1+delta; i--)
+        {
+            array[i, 0+delta] = fillNum; 
+            fillNum++;
         }
         
-    }
-       
-}
-*/
 
-int[,] newArray = NewArray(5,5);
-ShowMinRow(newArray);
+        
+    }
+      
+    return array;
+    /*    
+    for (int i = sideNum-(sideNum-fillNum); i<sideNum; i++)
+        {
+        array[i, sideNum-fillNum] = fillNum;
+        }
+        
+    for (int i = 0; i<sideNum; i++)
+        {
+        array[sideNum-fillNum, i] = fillNum;
+        }
+        
+    for (int i = 0; i<sideNum; i++)
+        {
+        array[i, sideNum-sideNum] = fillNum;
+        }
+        
+    
+    
+}
+
+
+
+int[,] myArray = SpiralFIll(5);
+ShowArray(myArray);
+*/

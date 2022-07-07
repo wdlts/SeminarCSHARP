@@ -20,7 +20,7 @@ int SumNum (int n)
     else return 0;
 }  
 Console.WriteLine(SumNum(n));
-*/
+
 
 
 
