@@ -1,3 +1,4 @@
 gitbin
 obj
 *.csproj
+bin
