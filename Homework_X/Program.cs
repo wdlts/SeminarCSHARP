@@ -8,8 +8,8 @@ string[] CreateStringArray(int size )
     string[] words = new string [size];
     for(int i = 0; i < size; i++)
     {
-        Console.Write($"Input {i + 1} word: ");
-        words [i] = Console.ReadLine();
+        Console.Write($"Input {i + 1} English word: ");
+        words[i] = Console.ReadLine();
     }
     return words;
 }
@@ -48,7 +48,7 @@ string[] CreateStringArray(int size)
     return words;
 }
 
-string[] MatchArrayWords(int size, string[] array1)
+string[] MergeArrayWords(int size, string[] array1)
 {
     string[] words = new string [size];
     for(int i = 0; i < size; i=i+2)
@@ -62,7 +62,6 @@ void ShowArray(string[] array)
 {
     for(int i = 0; i < array.Length; i++)
       Console.Write(array[i] + " ");
-   
     Console.WriteLine();
 }
 
@@ -71,12 +70,10 @@ int size = Convert.ToInt32(Console.ReadLine());
 if (size % 2 !=0)
 {
     Console.WriteLine("Arrays size should be even.");
-    
 }
 else
 {
     string[] myarray1 = CreateStringArray(size);
-    ShowArray(MatchArrayWords(size, myarray1));
+    ShowArray(MergeArrayWords(size, myarray1));
 }
-
 */
